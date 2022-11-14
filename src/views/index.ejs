@@ -1,0 +1,103 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<body>
+   
+   <div class="topnav">
+    <a class="active" href="#home">Home</a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+  </div>
+  
+  <h1> List Users </h1>
+  <!-- <%= dataUser %> -->
+  <img src="/image/NODEJSBASIC4.png" />
+
+ <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fhaycafe.vn%2Fanh-gai-xinh-de-thuong%2F&psig=AOvVaw36wKV5v9-e2wNm2xNziBgw&ust=1668087670523000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCIC67fmcofsCFQAAAAAdAAAAABAE" alt="hình tui">
+
+ <title>W3.CSS</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+ <body>
+ 
+    <title>W3.CSS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <body>
+    
+    <div class="w3-container">
+      <h2>Table With Different Hover Colors</h2>
+      <p>If you different hover colors, add w3-hover-<em>color</em> classes to each tr element:</p>
+    
+      <table class="w3-table-all">
+        <thead>
+          <tr class="w3-light-grey w3-hover-red">
+            <th>ID</th>
+             <th>First Name</th>
+            <th>Last Name</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+            <%=dataUser.length %>
+            <% for(let i=0; i < dataUser.length; i++) { %>
+                <tr>
+                    <td>
+                        <%= dataUser[i].Id%>
+                    </td>
+                    <td>
+                        <%= dataUser[i].firstname %>
+                    </td>
+                    <td>
+                        <%= dataUser[i].lastName %>
+                    </td>
+                    <td>
+                        
+                    </td>
+                    <td>
+                        <a href="/detail/user/<%= dataUser[i].Id %>" target="_blank">Detail</a>
+                        <button type="button">Edit</button>
+                        <button type="button">Delete</button>
+                    </td>
+                </tr>
+                <% } %>
+           
+        </tbody>
+      </table>
+    </div>
+    <div class="createuser">
+        <div> <b>Create user</b> </div>
+        <div>
+            <label> First name </label>
+            <input type="text">
+        </div>
+        <div>
+            <label> Last name </label>
+            <input type="text">
+        </div>
+        <div>
+            <label> Email name </label>
+            <input type="text">
+        </div>
+        <div>
+            <label> Adress name </label>
+            <input type="text">
+        </div>
+        <div> 
+           <button type="button" class =" button"> Submit</button>
+
+        </div>
+    </div>
+    
+    
+</body>
+
+</html>
